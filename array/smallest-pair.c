@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 int main()
 {
@@ -20,7 +21,7 @@ int main()
 
         int _i = 1;
         int _j = 2;
-        int smallest_pair = a[_i] + a[_j] + _j - _i;
+        int smallest_pair = INT_MAX;
 
         for (int i = _i; i <= n - 1; i++)
         {
@@ -33,7 +34,7 @@ int main()
                     smallest_pair = sum;
                 }
 
-                // printf("%d + %d + %d - %d = %d\n", a[i], a[j], j, i, sum);
+                printf("%d + %d + %d - %d = %d\n", a[i], a[j], j, i, sum);
             }
             _j++;
         }
